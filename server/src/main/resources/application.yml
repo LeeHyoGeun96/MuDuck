@@ -5,8 +5,12 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
-      ddl-auto: update # 이 설정으로 테이블 자동 생성
+      ddl-auto: create # update에서 create로 변경
     show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true # SQL 로그 추가
   security:
     oauth2:
       client:
