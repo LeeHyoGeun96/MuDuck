@@ -4,9 +4,12 @@ spring:
     url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}?sslmode=require
     username: ${PGUSER}
     password: ${PGPASSWORD}
-    hikari:
-      connection-timeout: 30000
+     hikari:
+      connection-timeout: 60000        # 60초로 증가
       maximum-pool-size: 10
+      minimum-idle: 5                  # 최소 연결 수 추가
+      idle-timeout: 300000            # 유휴 연결 타임아웃
+      connection-test-query: SELECT 1 
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
