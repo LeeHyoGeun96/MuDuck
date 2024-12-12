@@ -61,6 +61,7 @@ tasks.named('asciidoctor') {
 	dependsOn test
 }
 
+
 task copyDocument(type: Copy) {
 	dependsOn asciidoctor
 	from file("${asciidoctor.outputDir}")
