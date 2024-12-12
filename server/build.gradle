@@ -47,7 +47,7 @@ dependencies {
 	implementation 'com.google.code.gson:gson'
 	testImplementation("org.springframework.security:spring-security-test")
 	implementation 'org.postgresql:postgresql:42.6.0'
-	implementation 'mysql:mysql-connector-java'
+	implementation 'mysql:mysql-connector-java:8.0.33'
 }
 
 tasks.named('test') {
