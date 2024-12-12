@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: ${POSTGRES_URL}
+    url: ${DATABASE_URL}
     username: ${POSTGRES_USER}
     password: ${POSTGRES_PASSWORD}
   jpa:
